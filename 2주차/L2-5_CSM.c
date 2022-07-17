@@ -7,13 +7,15 @@ int* solution(long long n) {
     long long ten_multiple;
     long long cipher=0;
 	int check;
+	long long temp=0; 
 	
 	for(ten_multiple=1 ;  ; ten_multiple*=10)  //Convert to a multiple of 10
 	{
-		if(ten_multiple<0)
+		if(n>1000000000)
 		{
 			ten_multiple=1000000000;
 			check=1;
+			cipher=10;
 			break;
 		}
 		else if(ten_multiple>n)
@@ -27,13 +29,14 @@ int* solution(long long n) {
 	if(check==0)
 		ten_multiple/=10; 
     
-    divided_number=(int*)malloc((cipher+1)*4);
+    divided_number=(int*)malloc((cipher)*4);
     
 	
 	for(ten_multiple ; ten_multiple>0 ; ten_multiple/=10)	//divide number
 	{
-		divided_number[cipher-1]=n/ten_multiple;
-		divided_number[cipher-1]%=10;
+		temp=n/ten_multiple;
+		temp%=10;
+		divided_number[cipher-1]=temp;
 		cipher--;
 	}
 	
@@ -49,7 +52,7 @@ void main(void)
 	
 	result=solution(input);
 	
-	while(n<=8)
+	while(n<=9)
 	{
 		printf("%d",result[n]);
 		n++;
