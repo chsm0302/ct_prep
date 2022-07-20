@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-// arr_lenÀº ¹è¿­ arrÀÇ ±æÀÌÀÔ´Ï´Ù.
+// arr_lenÃ€Âº Â¹Ã¨Â¿Â­ arrÃ€Ã‡ Â±Ã¦Ã€ÃŒÃ€Ã”Â´ÃÂ´Ã™.
 double solution(int arr[], size_t arr_len) {
     double answer = 0;
     int index;
