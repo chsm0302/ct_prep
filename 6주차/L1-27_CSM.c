@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-// nums_lenÀº ¹è¿­ numsÀÇ ±æÀÌÀÔ´Ï´Ù.
+// nums_lenÃ€Âº Â¹Ã¨Â¿Â­ numsÃ€Ã‡ Â±Ã¦Ã€ÃŒÃ€Ã”Â´ÃÂ´Ã™.
 int solution(int nums[], size_t nums_len) 
 {
     int answer = 0;
